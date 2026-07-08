@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4e0b5"/>
+      <stop offset="48%" stop-color="#e59a4a"/>
+      <stop offset="100%" stop-color="#c96a2b"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#41c7c7"/>
+      <stop offset="100%" stop-color="#5a3417"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="120" r="130" fill="rgba(255,255,255,0.22)"/>
+  <circle cx="120" cy="520" r="170" fill="rgba(65,199,199,0.16)"/>
+  <rect x="72" y="78" width="420" height="474" rx="34" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.34)"/>
+  <rect x="534" y="96" width="594" height="438" rx="34" fill="url(#card)" opacity="0.96"/>
+  <text x="110" y="168" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#5a3417">Pousada em Araruama</text>
+  <text x="110" y="250" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="900" fill="#5a3417">Pousada</text>
+  <text x="110" y="312" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="900" fill="#5a3417">Me Leva Logo</text>
+  <text x="110" y="382" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#6e4d2f">Reserva rápida no WhatsApp</text>
+  <rect x="110" y="430" width="270" height="56" rx="18" fill="#5a3417"/>
+  <text x="245" y="466" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Hospedagem confortável</text>
+  <text x="586" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="rgba(255,255,255,0.75)">Araruama • RJ</text>
+  <text x="586" y="260" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#ffffff">Página pronta</text>
+  <text x="586" y="330" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#ffffff">para SEO e anúncios</text>
+  <text x="586" y="408" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.88)">Foco em conversão e contato direto</text>
+  <rect x="586" y="452" width="214" height="58" rx="18" fill="#fec917"/>
+  <text x="693" y="489" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" fill="#5a3417">WhatsApp</text>
+</svg>

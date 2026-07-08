@@ -70,9 +70,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        <a className="skip-link" href="#conteudo">
-          Pular para o conteúdo
-        </a>
         {children}
       </body>
     </html>

@@ -2,6 +2,9 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
 export default function ContactBar() {
+  const phone = "5522992075703";
+  const message = "Olá! Quero reservar na Pousada Me Leva Logo!";
+
   return (
     <Container>
       <div className="contact-bar">
@@ -18,7 +21,11 @@ export default function ContactBar() {
           (22) 99207-5703
         </div>
 
-        <Button variant="whatsapp">
+        <Button
+          variant="whatsapp"
+          href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
+          target="_blank"
+        >
           Chamar no WhatsApp
         </Button>
       </div>

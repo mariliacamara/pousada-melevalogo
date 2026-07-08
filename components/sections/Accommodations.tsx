@@ -5,6 +5,9 @@ import SectionTitle from "../ui/SectionTitle";
 import Button from "../ui/Button";
 
 export default function Accommodations() {
+  const phone = "5522992075703";
+  const message = "Olá! Gostaria de consultar a disponibilidade de quartos na Pousada Me Leva Logo.";
+
   return (
     <section className="acomodacoes" id="acomodacoes">
       <div className="container">
@@ -24,7 +27,11 @@ export default function Accommodations() {
         </div>
 
         <div className="center">
-          <Button variant="ocean">
+          <Button
+            variant="ocean"
+            href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
+            target="_blank"
+          >
             Consultar disponibilidade
           </Button>
         </div>

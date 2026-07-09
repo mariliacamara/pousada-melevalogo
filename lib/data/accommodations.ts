@@ -9,7 +9,7 @@ export const accommodations = [
     image: "/images/gallery/piscina.jpg",
     alt: "Piscina",
     label:
-      "Piscina com pastilhas.",
+      "Piscina para crianças e adultos.",
   },
   {
     image: "/images/gallery/pergola.jpg",

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s | Pousada Me Leva Logo',
   },
   description:
-    'Pousada Me Leva Logo em Araruama. Hospedagem confortável, atendimento rápido pelo WhatsApp e página otimizada para SEO local e Google Ads.',
+    'Pousada Me Leva Logo em Araruama. Hospedagem confortável, atendimento rápido pelo WhatsApp.',
   keywords: [
     'pousada em Araruama',
     'hospedagem em Araruama',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pousada Me Leva Logo',
     description:
-      'Landing page pronta para reservas via WhatsApp, SEO local e tráfego pago.',
+      'Pousada Me Leva Logo em Araruama. Hospedagem confortável, atendimento rápido pelo WhatsApp.',
     url: siteUrl,
     siteName: 'Pousada Me Leva Logo',
     locale: 'pt_BR',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Pousada Me Leva Logo',
     description:
-      'Página de hospedagem em Araruama com foco em conversão e SEO.',
+      'Pousada Me Leva Logo em Araruama. Hospedagem confortável, atendimento rápido pelo WhatsApp.',
     images: ['/og-image.svg'],
   },
   robots: {

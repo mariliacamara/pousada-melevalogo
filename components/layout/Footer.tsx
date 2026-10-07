@@ -1,95 +1,79 @@
-// components/layout/Footer.tsx
-
 import Image from "next/image";
+import Link from "next/link";
 
-const navigation = [
-  { label: "Benefícios", href: "#beneficios" },
-  { label: "Acomodações", href: "#acomodacoes" },
-  { label: "Área de Lazer", href: "#lazer" },
-  { label: "Localização", href: "#localizacao" },
-  { label: "FAQ", href: "#faq" },
-];
+import CookiePreferences from "@/components/analytics/CookiePreferences";
+import WhatsAppLink from "@/components/WhatsAppLink";
+import { navigation } from "@/lib/data/navigation";
+import { site } from "@/lib/site";
+import { messages } from "@/lib/whatsapp";
+import logo from "@/public/fotos/logo.png";
 
-const socialLinks = [
-  {
-    label: "Instagram",
-    href: "https://instagram.com/melevalogopousada",
-  },
-  {
-    label: "Facebook",
-    href: "https://facebook.com/",
-  },
-];
-
-export default function Footer() {
-  const phone = "5522992075703";
+export default function Footer({ showCookiePreferences }: { showCookiePreferences: boolean }) {
+  const { address } = site;
 
   return (
-    <footer>
-      <div className="container">
-        <div className="footer-grid">
-          <div>
-            <div className="footer-logo">
-              <Image
-                src="/images/logo.png"
-                alt="Pousada Me Leva Logo"
-                width={180}
-                height={80}
-              />
-            </div>
-
-            <p>
-              R. Camorim, 1185 -
-              Araruama, Rio de Janeiro
-              <br />
-              Próximo à Praia do Barbudo
-            </p>
-          </div>
-
-          <div className="footer-col">
-            <h4>Navegação</h4>
-
-            {navigation.map((item) => (
-              <a key={item.href} href={item.href}>
-                {item.label}
-              </a>
-            ))}
-          </div>
-
-          <div className="footer-col">
-            <h4>Contato</h4>
-
-            <a
-              href={`https://wa.me/${phone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              (22) 99207-5703
-            </a>
-          </div>
-
-          <div className="footer-col">
-            <h4>Redes Sociais</h4>
-
-            {socialLinks.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+    // pb extra no celular: a barra fixa de WhatsApp não cobre o fim do rodapé.
+    <footer className="bg-ink pb-28 pt-12 text-white md:pb-8">
+      <div className="wrap flex flex-wrap items-start justify-between gap-x-12 gap-y-8">
+        <div className="flex min-w-0 flex-[1_1_20rem] items-center gap-5">
+          <Image src={logo} alt="" sizes="96px" className="h-24 w-auto shrink-0" />
+          <address className="text-base not-italic">
+            {address.street} · {address.neighborhood}
+            <br />
+            {address.city}, {address.region} · CEP {address.postalCode}
+            <br />
+            Pertinho da Praia do Barbudo
+          </address>
         </div>
 
-        <div className="footer-bottom">
-          <span>
-            © {new Date().getFullYear()} Pousada Me Leva Logo — Araruama, RJ
-          </span>
+        <nav aria-label="Rodapé">
+          <ul className="flex flex-col font-bold">
+            {navigation.map(({ label, href }) => (
+              <li key={href}>
+                <Link href={href} className="block py-2 underline-offset-4 hover:underline">
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          <span>Praia do Barbudo · Lagoa de Araruama</span>
+        <ul className="flex flex-col font-bold">
+          <li>
+            <WhatsAppLink
+              message={messages.generic}
+              placement="footer"
+              className="block py-2 text-sun underline-offset-4 hover:underline"
+            >
+              WhatsApp {site.phone.display}
+            </WhatsAppLink>
+          </li>
+          <li>
+            <a
+              href={site.instagram.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-2 underline-offset-4 hover:underline"
+            >
+              Instagram {site.instagram.handle}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="wrap mt-8">
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-[#6b4a35] pt-5 text-sm text-[#e8d9cc]">
+          <p>
+            © {new Date().getFullYear()} {site.name} · {address.city}, {address.region}
+          </p>
+          <div className="flex flex-wrap gap-x-5 gap-y-1">
+            <Link href="/privacidade" className="py-1 underline underline-offset-4">
+              Privacidade
+            </Link>
+            {showCookiePreferences && (
+              <CookiePreferences className="cursor-pointer py-1 underline underline-offset-4" />
+            )}
+          </div>
         </div>
       </div>
     </footer>

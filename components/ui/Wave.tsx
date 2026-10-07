@@ -1,24 +1,22 @@
-interface Props {
-  fill: string;
-  reverse?: boolean;
-}
-
+/** Onda do logo, usada como divisor entre seções. `flip` inverte para o topo. */
 export default function Wave({
-  fill,
-  reverse,
-}: Props) {
-  const path = reverse
-    ? "M0,30 C220,62 420,0 600,30 C780,62 980,0 1200,30 L1200,68 L0,68 Z"
-    : "M0,38 C160,10 360,66 600,38 C840,10 1040,66 1200,38 L1200,68 L0,68 Z";
-
+  className,
+  flip = false,
+}: {
+  className?: string;
+  flip?: boolean;
+}) {
   return (
-    <div className="wave">
-      <svg
-        viewBox="0 0 1200 68"
-        preserveAspectRatio="none"
-      >
-        <path d={path} fill={fill} />
-      </svg>
-    </div>
+    <svg
+      viewBox="0 0 1440 80"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+      className={`block h-10 w-full sm:h-14 ${flip ? "rotate-180" : ""} ${className ?? ""}`}
+    >
+      <path
+        fill="currentColor"
+        d="M0 40 C 180 0 360 80 540 40 S 900 0 1080 40 S 1350 70 1440 40 V80 H0 Z"
+      />
+    </svg>
   );
 }
